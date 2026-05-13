@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Evidencias - Herramientas Digitales</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Iconos Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: #f8fafc;
+        }
+        /* Clase para animar la entrada de las "páginas" */
+        .fade-in {
+            animation: fadeIn 0.4s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="text-slate-800 flex flex-col min-h-screen">
+
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <header class="bg-indigo-700 text-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
+            <h1 class="text-2xl font-bold flex items-center gap-2">
+                <i class="ph ph-laptop text-3xl"></i> Portafolio Digital
+            </h1>
+            <nav class="mt-4 md:mt-0">
+                <ul class="flex flex-wrap justify-center gap-4 md:gap-8 font-medium">
+                    <li><button onclick="cambiarPagina('pagina1')" class="hover:text-indigo-200 transition pb-1 border-b-2 border-transparent hover:border-indigo-200 nav-link" id="nav-pagina1">Inicio</button></li>
+                    <li><button onclick="cambiarPagina('pagina2')" class="hover:text-indigo-200 transition pb-1 border-b-2 border-transparent hover:border-indigo-200 nav-link" id="nav-pagina2">Evidencias</button></li>
+                    <li><button onclick="cambiarPagina('pagina3')" class="hover:text-indigo-200 transition pb-1 border-b-2 border-transparent hover:border-indigo-200 nav-link" id="nav-pagina3">Créditos</button></li>
+                    <li><button onclick="cambiarPagina('pagina4')" class="hover:text-indigo-200 transition pb-1 border-b-2 border-transparent hover:border-indigo-200 nav-link" id="nav-pagina4">Tema Libre</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <main class="flex-grow container mx-auto px-4 py-8">
+
+        <!-- ==============================================
+             PÁGINA 1: INTRODUCCIÓN 
+             ============================================== -->
+        <section id="pagina1" class="seccion-pagina fade-in">
+            <div class="bg-white rounded-2xl shadow-sm p-8 md:p-12 border border-slate-100 max-w-4xl mx-auto mt-8">
+                <div class="text-center mb-8">
+                    <i class="ph ph-books text-6xl text-indigo-500 mb-4 inline-block"></i>
+                    <h2 class="text-4xl font-extrabold text-slate-900 mb-2">Bienvenido a mi Portafolio</h2>
+                    <h3 class="text-xl text-slate-500">Materia: Herramientas Digitales</h3>
+                </div>
+                
+                <div class="prose prose-lg text-slate-600 mx-auto text-justify">
+                    <p class="mb-6">
+                        Bienvenidos a nuestro portafolio digital de evidencias correspondiente a la materia de Herramientas Digitales. Este espacio web ha sido cuidadosamente diseñado para mostrar el progreso, aprendizaje y aplicación de diversas tecnologías de la información a lo largo del semestre, con un enfoque directo en el contexto de los negocios y la administración. A través de este sitio, documentamos la transición desde el entendimiento básico del almacenamiento en la nube, hasta el diseño integral de sitios web.
+                    </p>
+                    <p>
+                        A lo largo de las unidades, hemos explorado y dominado herramientas esenciales como procesadores de texto y almacenamiento colaborativo en la nube, software de presentaciones multimedia avanzadas, y el manejo de grandes volúmenes de datos mediante funciones lógicas y gráficas en Excel. Cada evidencia aquí presentada no solo exhibe nuestro trabajo académico, sino que incluye una profunda reflexión sobre cómo la aplicación práctica de estas soluciones tecnológicas optimiza procesos, mejora la comunicación y facilita la toma de decisiones estratégicas dentro de una organización real.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==============================================
+             PÁGINA 2: EVIDENCIAS Y REFLEXIONES
+             ============================================== -->
+        <section id="pagina2" class="seccion-pagina hidden fade-in">
+            <div class="mb-10 text-center">
+                <h2 class="text-3xl font-bold text-slate-900">Listado de Evidencias</h2>
+                <p class="text-slate-500 mt-2">Trabajos realizados y reflexiones sobre la importancia de cada herramienta.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Trabajo 1 -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col">
+                    <div class="bg-blue-50 border-b border-slate-200 p-4 flex items-center gap-3">
+                        <i class="ph ph-cloud text-3xl text-blue-600"></i>
+                        <div>
+                            <h3 class="font-bold text-slate-800">Meta 1.2: Almacenamiento en la nube</h3>
+                            <span class="text-xs font-semibold bg-blue-100 text-blue-700 px-2 py-1 rounded">Unidad 1</span>
+                        </div>
+                    </div>
+                    <div class="p-5 flex-grow">
+                        <p class="text-sm font-semibold text-slate-700 mb-1">Reflexión de la Herramienta (Google Drive):</p>
+                        <p class="text-sm text-slate-600 mb-4 text-justify">El uso de herramientas de almacenamiento colaborativo en la nube, como Google Drive, ha revolucionado la forma en que operan las empresas. Permite a los equipos trabajar de forma simultánea en documentos, garantizando la disponibilidad de la información en todo momento y lugar. Esto optimiza el flujo de trabajo, mejora la organización de los sistemas empresariales y resulta vital para la agilidad competitiva actual.</p>
+                        <a href="Meta 1.2. Utilizar herramientas de almacenamiento en el contexto digital a partir del análisis de los mismos.docx" download class="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-800 font-medium text-sm transition">
+                            <i class="ph ph-download-simple"></i> Descargar Documento
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Trabajo 2 -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col">
+                    <div class="bg-orange-50 border-b border-slate-200 p-4 flex items-center gap-3">
+                        <i class="ph ph-presentation-chart text-3xl text-orange-600"></i>
+                        <div>
+                            <h3 class="font-bold text-slate-800">Meta 2.1: Herramientas de presentación</h3>
+                            <span class="text-xs font-semibold bg-orange-100 text-orange-700 px-2 py-1 rounded">Unidad 2</span>
+                        </div>
+                    </div>
+                    <div class="p-5 flex-grow">
+                        <p class="text-sm font-semibold text-slate-700 mb-1">Reflexión de la Herramienta (Presentaciones):</p>
+                        <p class="text-sm text-slate-600 mb-4 text-justify">El uso de software especializado para presentaciones y mapas mentales es clave para sintetizar información compleja. Estas herramientas permiten jerarquizar ideas visualmente de manera interactiva. En el entorno de los negocios, facilitan la comprensión de estrategias y datos técnicos por parte de clientes e inversionistas, reduciendo la carga cognitiva y logrando exposiciones mucho más eficaces.</p>
+                        <a href="Meta 2.1 Identificación de herramientas de presentación digital.pptx" download class="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-800 font-medium text-sm transition">
+                            <i class="ph ph-download-simple"></i> Descargar Presentación
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Trabajo 3 -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col md:col-span-2">
+                    <div class="bg-purple-50 border-b border-slate-200 p-4 flex items-center gap-3">
+                        <i class="ph ph-video-camera text-3xl text-purple-600"></i>
+                        <div>
+                            <h3 class="font-bold text-slate-800">Meta 2.2: Presentación digital con audio (La Inteligencia Artificial en los Negocios)</h3>
+                            <span class="text-xs font-semibold bg-purple-100 text-purple-700 px-2 py-1 rounded">Unidad 2</span>
+                        </div>
+                    </div>
+                    <div class="p-5 grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <p class="text-sm font-semibold text-slate-700 mb-1">Reflexión de la Herramienta (ScreenMatic / Multimedia):</p>
+                            <p class="text-sm text-slate-600 mb-4 text-justify">La integración de elementos multimedia, como audio y video simultáneo, eleva exponencialmente la calidad de la comunicación asíncrona. Herramientas de grabación y animación nos permiten transmitir no solo datos, sino también el tono y la intención del mensaje, humanizando la distancia digital y creando tutoriales y demostraciones ejecutivas profundamente persuasivas y profesionales.</p>
+                        </div>
+                        <div class="bg-slate-900 rounded-lg overflow-hidden flex items-center justify-center min-h-[200px]">
+                            <!-- Video Embed -->
+                            <video controls class="w-full h-full object-cover rounded-lg border border-slate-300 shadow-inner">
+                                <source src="Meta 2.2 Aplicación de una herramienta avanzada de presentación digital sobre un tema de interes. La Inteligencia Artificial en los Negocios.mp4" type="video/mp4">
+                                Tu navegador no soporta la reproducción de video.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trabajo 4 -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col">
+                    <div class="bg-emerald-50 border-b border-slate-200 p-4 flex items-center gap-3">
+                        <i class="ph ph-table text-3xl text-emerald-600"></i>
+                        <div>
+                            <h3 class="font-bold text-slate-800">Meta 3.2: Hoja de cálculo con operaciones</h3>
+                            <span class="text-xs font-semibold bg-emerald-100 text-emerald-700 px-2 py-1 rounded">Unidad 3</span>
+                        </div>
+                    </div>
+                    <div class="p-5 flex-grow">
+                        <p class="text-sm font-semibold text-slate-700 mb-1">Reflexión de la Herramienta (Excel - Funciones Lógicas):</p>
+                        <p class="text-sm text-slate-600 mb-4 text-justify">Excel actúa como el motor analítico de la administración. Dominar las condiciones y funciones (SI simple y anidado) nos permite automatizar la toma de decisiones basada en criterios específicos. Desde calcular comisiones de ventas hasta categorizar niveles operativos, estas herramientas minimizan el margen de error humano y aceleran el procesamiento de datos administrativos.</p>
+                        <div class="flex flex-col gap-2">
+                            <a href="Practica 3.2.xlsx - condiciones simple.csv" download class="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-800 font-medium text-sm transition">
+                                <i class="ph ph-file-csv"></i> Descargar Práctica Simple
+                            </a>
+                            <a href="Practica 3.2.xlsx - Condiciones Anidadas.csv" download class="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-800 font-medium text-sm transition">
+                                <i class="ph ph-file-csv"></i> Descargar Práctica Anidada
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trabajo 5 -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col">
+                    <div class="bg-teal-50 border-b border-slate-200 p-4 flex items-center gap-3">
+                        <i class="ph ph-chart-bar text-3xl text-teal-600"></i>
+                        <div>
+                            <h3 class="font-bold text-slate-800">Meta 3.3: Graficación de volúmenes de datos</h3>
+                            <span class="text-xs font-semibold bg-teal-100 text-teal-700 px-2 py-1 rounded">Unidad 3</span>
+                        </div>
+                    </div>
+                    <div class="p-5 flex-grow">
+                        <p class="text-sm font-semibold text-slate-700 mb-1">Reflexión de la Herramienta (Excel - Gráficas):</p>
+                        <p class="text-sm text-slate-600 mb-4 text-justify">La capacidad de transformar miles de filas de datos en representaciones visuales claras es invaluable. Las gráficas nos ayudan a detectar tendencias macro, como niveles educativos o indicadores TIC en la población. Esta visualización instantánea permite a las mesas directivas interpretar la situación actual de un vistazo, respaldando la formulación de estrategias inteligentes.</p>
+                        <div class="flex flex-col gap-2">
+                            <a href="Practica 3.3.xlsx - Nivel Educativo.csv" download class="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-800 font-medium text-sm transition">
+                                <i class="ph ph-file-csv"></i> Datos Nivel Educativo
+                            </a>
+                            <a href="Practica 3.3.xlsx - Indicadores TICS.csv" download class="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-800 font-medium text-sm transition">
+                                <i class="ph ph-file-csv"></i> Datos Indicadores TIC
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trabajo 6 -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col md:col-span-2 max-w-3xl mx-auto w-full">
+                    <div class="bg-rose-50 border-b border-slate-200 p-4 flex items-center gap-3">
+                        <i class="ph ph-globe text-3xl text-rose-600"></i>
+                        <div>
+                            <h3 class="font-bold text-slate-800">Meta 4.1: Diseño de páginas web</h3>
+                            <span class="text-xs font-semibold bg-rose-100 text-rose-700 px-2 py-1 rounded">Unidad 4</span>
+                        </div>
+                    </div>
+                    <div class="p-5 flex-grow text-center">
+                        <p class="text-sm font-semibold text-slate-700 mb-1">Reflexión de la Herramienta (Diseño Web y CMS):</p>
+                        <p class="text-sm text-slate-600 mb-4 text-justify">Comprender los fundamentos del ecosistema web (HTML, CSS) y la implementación de Sistemas de Gestión de Contenidos (CMS) otorga a cualquier proyecto una vitrina digital ilimitada. En la actualidad, la presencia en línea ya no es opcional; tener la habilidad técnica para estructurar, diseñar y lanzar un sitio funcional es la clave para la visibilidad de una marca, la fidelización del cliente y el crecimiento de cualquier organización en la era de la información.</p>
+                        <a href="M4.1.docx" download class="inline-flex justify-center items-center gap-2 bg-rose-100 hover:bg-rose-200 text-rose-800 font-semibold py-2 px-6 rounded-full transition">
+                            <i class="ph ph-download-simple"></i> Descargar Investigación
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ==============================================
+             PÁGINA 3: CRÉDITOS 
+             ============================================== -->
+        <section id="pagina3" class="seccion-pagina hidden fade-in">
+            <div class="max-w-2xl mx-auto mt-10">
+                <div class="bg-white p-8 rounded-3xl shadow-lg border border-slate-100 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-3 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
+                    
+                    <h2 class="text-3xl font-bold text-center text-slate-800 mb-8 mt-2">Créditos del Proyecto</h2>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4 bg-slate-50 p-4 rounded-xl border border-slate-100">
+                            <div class="bg-indigo-100 p-3 rounded-full text-indigo-600">
+                                <i class="ph ph-user-circle text-2xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-slate-500 font-medium">Alumno Autor</p>
+                                <p class="text-lg font-bold text-slate-800">José Roberto Abrica Ceja</p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="flex items-center gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100">
+                                <i class="ph ph-identification-card text-2xl text-slate-400"></i>
+                                <div>
+                                    <p class="text-xs text-slate-500 font-medium">Matrícula</p>
+                                    <p class="font-semibold text-slate-800">385588</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100">
+                                <i class="ph ph-users-three text-2xl text-slate-400"></i>
+                                <div>
+                                    <p class="text-xs text-slate-500 font-medium">Grupo</p>
+                                    <p class="font-semibold text-slate-800">731</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-1 mt-6 border-t border-slate-200 pt-6">
+                            <div class="flex justify-between items-center py-2 border-b border-dashed border-slate-200">
+                                <span class="text-slate-500 font-medium">Licenciatura</span>
+                                <span class="text-slate-800 font-semibold text-right">Administración de Empresas</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2 border-b border-dashed border-slate-200">
+                                <span class="text-slate-500 font-medium">Materia</span>
+                                <span class="text-slate-800 font-semibold">Herramientas Digitales</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2 border-b border-dashed border-slate-200">
+                                <span class="text-slate-500 font-medium">Docente</span>
+                                <span class="text-slate-800 font-semibold">Marina Isabel Sanchez Sanchez</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2">
+                                <span class="text-slate-500 font-medium">Fecha de Elaboración</span>
+                                <span class="text-slate-800 font-semibold">Mayo, 2026</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==============================================
+             PÁGINA 4: TEMA LIBRE 
+             ============================================== -->
+        <section id="pagina4" class="seccion-pagina hidden fade-in">
+            <div class="max-w-5xl mx-auto mt-4">
+                <div class="text-center mb-10">
+                    <span class="bg-pink-100 text-pink-700 font-bold px-4 py-1 rounded-full text-sm tracking-wide">TEMA ADICIONAL</span>
+                    <h2 class="text-3xl font-bold text-slate-900 mt-4">El Impacto de la Tecnología en el Entorno Laboral</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
+                    <div class="prose text-slate-600 text-justify">
+                        <p>
+                            A raíz de los recientes cambios mundiales, las herramientas digitales pasaron de ser una simple comodidad a convertirse en la infraestructura principal de las organizaciones. Según expertos, el trabajo se ha descentralizado y <strong>la oficina física se ha transformado en un "Hub" colaborativo</strong>, donde la tecnología inteligente (IA, automatización) toma las tareas rutinarias, permitiendo al talento humano concentrarse en la innovación.
+                        </p>
+                        <p>
+                            Las competencias que hemos adquirido durante este semestre —desde el análisis de bases de datos hasta la creación de plataformas de comunicación web— son justamente los pilares que exigen las empresas hoy en día.
+                        </p>
+                    </div>
+                    <div>
+                        <!-- Imagen de apoyo -->
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="" class="rounded-2xl shadow-lg border border-slate-200">
+                    </div>
+                </div>
+
+                <div class="bg-indigo-900 text-white rounded-3xl p-8 text-center shadow-xl">
+                    <h3 class="text-2xl font-bold mb-4">La Inteligencia Artificial y la Adaptabilidad</h3>
+                    <p class="max-w-2xl mx-auto text-indigo-100 mb-6">
+                        Como expusimos en la Meta 2.2, herramientas impulsadas por la IA están optimizando la logística, resumiendo juntas automáticamente y ayudando en la gestión de inventarios. Adoptar estas herramientas no es reemplazar al administrador, sino evolucionarlo.
+                    </p>
+                    <div class="flex justify-center gap-4">
+                        <i class="ph ph-robot text-4xl text-indigo-300"></i>
+                        <i class="ph ph-chart-line-up text-4xl text-indigo-300"></i>
+                        <i class="ph ph-lightbulb text-4xl text-indigo-300"></i>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="bg-slate-900 text-slate-400 py-6 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2026 UABC - Portafolio de Herramientas Digitales.</p>
+            <p class="text-sm mt-1">Diseñado para la evaluación de la Meta 4.2</p>
+        </div>
+    </footer>
+
+    <!-- LOGICA DE NAVEGACIÓN (SIMULA PÁGINAS) -->
+    <script>
+        function cambiarPagina(idPagina) {
+            // 1. Ocultar todas las secciones
+            const secciones = document.querySelectorAll('.seccion-pagina');
+            secciones.forEach(seccion => {
+                seccion.classList.add('hidden');
+                seccion.classList.remove('fade-in'); 
+            });
+
+            // 2. Mostrar la sección deseada
+            const seccionActiva = document.getElementById(idPagina);
+            seccionActiva.classList.remove('hidden');
+            // Forzar reflow para que la animación se reinicie
+            void seccionActiva.offsetWidth; 
+            seccionActiva.classList.add('fade-in');
+
+            // 3. Actualizar el estilo del menú de navegación
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.classList.remove('border-indigo-300', 'text-indigo-200');
+                link.classList.add('border-transparent');
+            });
+            
+            const linkActivo = document.getElementById('nav-' + idPagina);
+            if(linkActivo) {
+                linkActivo.classList.remove('border-transparent');
+                linkActivo.classList.add('border-indigo-300', 'text-indigo-200');
+            }
+            
+            // 4. Hacer scroll hacia arriba al cambiar de página
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Marcar la página 1 como activa al iniciar
+        document.getElementById('nav-pagina1').classList.remove('border-transparent');
+        document.getElementById('nav-pagina1').classList.add('border-indigo-300', 'text-indigo-200');
+    </script>
+</body>
+</html>
